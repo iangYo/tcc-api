@@ -1,4 +1,5 @@
 require('dotenv').config();
+require('./serviceLocator');
 
 const express = require('express');
 const compression = require('compression');
