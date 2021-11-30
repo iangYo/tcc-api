@@ -1,1 +1,2 @@
 require('./generalPackages');
+require('./auth');
