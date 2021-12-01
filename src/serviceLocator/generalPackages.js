@@ -17,4 +17,8 @@ serviceLocator.register('hash', () => {
   return require('../helpers/password/hash');
 });
 
+serviceLocator.register('validatePassword', () => {
+  return require('../helpers/password/validate');
+});
+
 module.exports = serviceLocator;
