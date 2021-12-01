@@ -14,4 +14,4 @@ const create = Joi.object().keys({
   })
 });
 
-module.exports = { create };
+module.exports = { create, login: create };
