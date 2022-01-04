@@ -1,6 +1,10 @@
 const Joi = require('joi');
 
 const create = Joi.object().keys({
+  name: Joi.string().required().messages({
+    'string.base': 'Nome deve ser do tipo texto',
+    'any.required': 'Nome é obrigatório'
+  }),
   email: Joi.string().email().required().messages({
     'string.base': 'Email deve ser do tipo texto',
     'string.email': 'Email deve ser válido',
