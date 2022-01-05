@@ -5,9 +5,9 @@ const validator = require('../../middleware/validator');
 const validateToken = require('../../middleware/token');
 const testimonial = require('../../validations/testimonial');
 
-// router.post('/login', validator(userSchema.login), (req, res, next) => {
-//   serviceLocator.get('authController').login(req, res, next);
-// });
+router.get('/', validateToken, (req, res) => {
+  serviceLocator.get('testimonialController').index(req, res);
+});
 
 router.post('/', validateToken, validator(testimonial.create), (req, res) => {
   serviceLocator.get('testimonialController').create(req, res);
