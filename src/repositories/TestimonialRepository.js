@@ -7,7 +7,8 @@ class TestimonialRepository {
     const Testimonial = this.mongoose.model('Testimonial');
     const testimonials = await Testimonial.find()
       .limit(limit)
-      .skip((page - 1) * limit);
+      .skip((page - 1) * limit)
+      .sort({ createdAt: 'desc' });
 
     return testimonials;
   }
