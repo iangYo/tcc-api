@@ -13,6 +13,10 @@ router.get('/:id', validateToken, (req, res) => {
   serviceLocator.get('testimonialController').show(req, res);
 });
 
+router.get('/user/:id', validateToken, (req, res) => {
+  serviceLocator.get('testimonialController').allByUser(req, res);
+});
+
 router.post('/', validateToken, validator(testimonial.create), (req, res) => {
   serviceLocator.get('testimonialController').create(req, res);
 });
