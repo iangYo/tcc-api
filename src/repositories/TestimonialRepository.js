@@ -12,6 +12,12 @@ class TestimonialRepository {
     return testimonials;
   }
 
+  async show(id) {
+    const Testimonial = this.mongoose.model('Testimonial');
+    const testimonial = await Testimonial.findById(id);
+    return testimonial;
+  }
+
   async create(body) {
     const Testimonial = this.mongoose.model('Testimonial');
     const testimonial = new Testimonial({ ...body });

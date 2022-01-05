@@ -9,6 +9,10 @@ router.get('/', validateToken, (req, res) => {
   serviceLocator.get('testimonialController').index(req, res);
 });
 
+router.get('/:id', validateToken, (req, res) => {
+  serviceLocator.get('testimonialController').show(req, res);
+});
+
 router.post('/', validateToken, validator(testimonial.create), (req, res) => {
   serviceLocator.get('testimonialController').create(req, res);
 });

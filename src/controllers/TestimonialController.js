@@ -16,6 +16,19 @@ class TestimonialController {
     }
   }
 
+  async show(request, response) {
+    const { id } = request.params;
+
+    try {
+      const testimonial = await this.testimonialRepository.show(id);
+      if (!testimonial) return response.status(404).json({ error: 'Nenhum relato de vivência encontrado!' });
+      return response.json(testimonial);
+    } catch (error) {
+      this.log.error(error);
+      return response.status(error.status || 500).json({ error: 'Ocorreu um erro inesperado!' });
+    }
+  }
+
   async create(request, response) {
     const { body } = request;
     try {
