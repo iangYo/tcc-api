@@ -6,12 +6,12 @@ const create = Joi.object().keys({
     'any.required': 'Id do usuário é obrigatório'
   }),
   title: Joi.string().required().messages({
-    'string.base': 'Email deve ser do tipo texto',
-    'any.required': 'Email é obrigatório'
+    'string.base': 'Título deve ser do tipo texto',
+    'any.required': 'Título é obrigatório'
   }),
   text: Joi.string().required().messages({
-    'string.base': 'Senha deve ser do tipo texto',
-    'any.required': 'Senha é obrigatório'
+    'string.base': 'Texto deve ser do tipo texto',
+    'any.required': 'Texto é obrigatório'
   })
 });
 
