@@ -9,10 +9,21 @@ class CommentRepository {
     return comment;
   }
 
+  async findOne(id) {
+    const Comment = this.mongoose.model('Comment');
+    const comment = await Comment.findById(id).select('user');
+    return comment;
+  }
+
   async create(body) {
     const Comment = this.mongoose.model('Comment');
     const comment = new Comment({ ...body });
     await comment.save();
+  }
+
+  async remove(id) {
+    const Comment = this.mongoose.model('Comment');
+    await Comment.deleteOne({ _id: id });
   }
 }
 

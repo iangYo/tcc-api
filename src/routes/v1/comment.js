@@ -13,4 +13,8 @@ router.post('/', validateToken, validator(comment.create), (req, res) => {
   serviceLocator.get('commentController').create(req, res);
 });
 
+router.delete('/:id', validateToken, (req, res) => {
+  serviceLocator.get('commentController').remove(req, res);
+});
+
 module.exports = router;
