@@ -33,7 +33,7 @@ class AuthController {
       const isValid = await this.validatePassword(password, user.password);
       if (!isValid) return response.status(401).json({ error: 'Senha incorreta!' });
 
-      const token = this.jwt.sign({ id: user.id, email: user.email }, app.secret, { expiresIn: '7d' });
+      const token = this.jwt.sign({ _id: user.id, email: user.email }, app.secret, { expiresIn: '7d' });
 
       const { password: _, ...rest } = user.toObject();
 
