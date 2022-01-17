@@ -15,4 +15,4 @@ const create = Joi.object().keys({
   })
 });
 
-module.exports = { create, login: create };
+module.exports = { create };
