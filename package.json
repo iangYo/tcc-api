@@ -9,7 +9,7 @@
     "prettier": "npx prettier --write src/**"
   },
   "author": "Ian Gabriel",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "compression": "^1.7.4",
