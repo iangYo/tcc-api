@@ -11,6 +11,7 @@ const promBundle = require('express-prom-bundle');
 const app = express();
 
 const metricsMiddleware = promBundle({
+  buckets: [0.1, 0.3, 0.5, 0.7, 1, 3, 5, 7, 10],
   includeMethod: true,
   includePath: true,
   includeUp: true,
