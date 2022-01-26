@@ -28,6 +28,9 @@ const create = Joi.object().keys({
   date: Joi.date().required().messages({
     'date.base': 'Data deve ser do tipo data',
     'any.required': 'Data é obrigatório'
+  }),
+  obs: Joi.string().messages({
+    'string.base': 'Observações deve ser do tipo texto'
   })
 });
 
@@ -55,6 +58,9 @@ const update = Joi.object().keys({
   date: Joi.date().messages({
     'date.base': 'Data deve ser do tipo data',
     'any.required': 'Data é obrigatório'
+  }),
+  obs: Joi.string().messages({
+    'string.base': 'Observações deve ser do tipo texto'
   })
 });
 
