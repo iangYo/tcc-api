@@ -12,7 +12,7 @@ const diarySchema = new Schema(
     feed: { type: String },
     symptoms: { type: Array },
     date: { type: Date },
-    obs: { type: String }
+    observations: { type: String }
   },
   { timestamps: true }
 );
