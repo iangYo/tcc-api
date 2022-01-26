@@ -1,33 +1,26 @@
 const Joi = require('joi');
 
 const create = Joi.object().keys({
-  user: Joi.string().required().messages({
-    'string.base': 'Id do usuário deve ser do tipo texto',
-    'any.required': 'Id do usuário é obrigatório'
+  user: Joi.string().messages({
+    'string.base': 'Id do usuário deve ser do tipo texto'
   }),
-  mood: Joi.array().items(Joi.string()).required().messages({
-    'array.base': 'Humor deve ser um array de strings',
-    'any.required': 'Humor é obrigatório'
+  mood: Joi.array().items(Joi.string()).messages({
+    'array.base': 'Humor deve ser um array de strings'
   }),
-  physical_activity: Joi.string().required().messages({
-    'string.base': 'Atividade física deve ser do tipo texto',
-    'any.required': 'Atividade física é obrigatório'
+  physical_activity: Joi.string().messages({
+    'string.base': 'Atividade física deve ser do tipo texto'
   }),
-  sleep: Joi.string().required().messages({
-    'string.base': 'Sono deve ser do tipo texto',
-    'any.required': 'Sono é obrigatório'
+  sleep: Joi.string().messages({
+    'string.base': 'Sono deve ser do tipo texto'
   }),
-  feed: Joi.string().required().messages({
-    'string.base': 'Alimentação deve ser do tipo texto',
-    'any.required': 'Alimentação é obrigatório'
+  feed: Joi.string().messages({
+    'string.base': 'Alimentação deve ser do tipo texto'
   }),
-  symptoms: Joi.array().items(Joi.string()).required().messages({
-    'array.base': 'Sintomas deve ser um array de strings',
-    'any.required': 'Sintomas é obrigatório'
+  symptoms: Joi.array().items(Joi.string()).messages({
+    'array.base': 'Sintomas deve ser um array de strings'
   }),
-  date: Joi.date().required().messages({
-    'date.base': 'Data deve ser do tipo data',
-    'any.required': 'Data é obrigatório'
+  date: Joi.date().messages({
+    'date.base': 'Data deve ser do tipo data'
   }),
   obs: Joi.string().messages({
     'string.base': 'Observações deve ser do tipo texto'
@@ -36,28 +29,22 @@ const create = Joi.object().keys({
 
 const update = Joi.object().keys({
   mood: Joi.array().items(Joi.string()).messages({
-    'array.base': 'Humor deve ser um array de strings',
-    'any.required': 'Humor é obrigatório'
+    'array.base': 'Humor deve ser um array de strings'
   }),
   physical_activity: Joi.string().messages({
-    'string.base': 'Atividade física deve ser do tipo texto',
-    'any.required': 'Atividade física é obrigatório'
+    'string.base': 'Atividade física deve ser do tipo texto'
   }),
   sleep: Joi.string().messages({
-    'string.base': 'Sono deve ser do tipo texto',
-    'any.required': 'Sono é obrigatório'
+    'string.base': 'Sono deve ser do tipo texto'
   }),
   feed: Joi.string().messages({
-    'string.base': 'Alimentação deve ser do tipo texto',
-    'any.required': 'Alimentação é obrigatório'
+    'string.base': 'Alimentação deve ser do tipo texto'
   }),
   symptoms: Joi.array().items(Joi.string()).messages({
-    'array.base': 'Sintomas deve ser um array de strings',
-    'any.required': 'Sintomas é obrigatório'
+    'array.base': 'Sintomas deve ser um array de strings'
   }),
   date: Joi.date().messages({
-    'date.base': 'Data deve ser do tipo data',
-    'any.required': 'Data é obrigatório'
+    'date.base': 'Data deve ser do tipo data'
   }),
   obs: Joi.string().messages({
     'string.base': 'Observações deve ser do tipo texto'
