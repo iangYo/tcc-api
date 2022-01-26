@@ -11,7 +11,8 @@ const diarySchema = new Schema(
     sleep: { type: String },
     feed: { type: String },
     symptoms: { type: Array },
-    date: { type: Date }
+    date: { type: Date },
+    obs: { type: String }
   },
   { timestamps: true }
 );
