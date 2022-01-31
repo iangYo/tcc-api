@@ -22,7 +22,7 @@ const create = Joi.object().keys({
   date: Joi.date().messages({
     'date.base': 'Data deve ser do tipo data'
   }),
-  obs: Joi.string().messages({
+  observations: Joi.string().messages({
     'string.base': 'Observações deve ser do tipo texto'
   })
 });
